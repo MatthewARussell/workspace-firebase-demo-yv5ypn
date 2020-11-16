@@ -23,9 +23,10 @@ $(".sampleSurvey input[type='submit']").click(function(e) {
     console.log(name + " " + value);
     surveyList[name] = value;
   }
-});
-firebase
+  firebase
     .firestore()
     .collection("survey-information")
-    .add(inputJson);
+    .add(surveyList);
+});
+
 // update the result in table
