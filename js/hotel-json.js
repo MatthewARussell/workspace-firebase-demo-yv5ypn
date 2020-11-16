@@ -15,6 +15,7 @@ firebase.initializeApp(firebaseConfig);
 $("input[type='button']").click(function(e) {
   //get the value of form
   var inputdata = $("form").serializeArray();
+  console.log(inputdata);
   var inputJson = {};
   for (var i = 0; i < inputdata.length; i++) {
     var name = inputdata[i]["name"];

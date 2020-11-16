@@ -5,5 +5,10 @@ var firebaseConfig = {};
 firebase.initializeApp(firebaseConfig);
 
 // save the data
+$(".sampleSurvey input[type='submit']").click(function() {
 
+
+
+  
+});
 // update the result in table
