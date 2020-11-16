@@ -29,12 +29,12 @@ $("input[type='button']").click(function(e) {
   // var cost = parseInt(inputJson["room"].slice(-3));
   // console.log("The cost for this reservation is " + night * cost);
 
-  /* save the data to database 
+  save the data to database 
   firebase
     .firestore()
-    .collection("hotelreservation")
+    .collection("Hotel-Information")
     .add(inputJson);
-*/
+
 
   /* clear the entry */
   $("form")[0].reset();
