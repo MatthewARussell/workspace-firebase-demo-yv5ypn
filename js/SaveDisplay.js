@@ -1,6 +1,13 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var firebaseConfig = {};
+var firebaseConfig = {apiKey: "AIzaSyBPIrziljsPZrg40EUPY8y79BkiSJpFwM4",
+  authDomain: "server-1-0-0.firebaseapp.com",
+  databaseURL: "https://server-1-0-0.firebaseio.com",
+  projectId: "server-1-0-0",
+  storageBucket: "server-1-0-0.appspot.com",
+  messagingSenderId: "90869535296",
+  appId: "1:90869535296:web:23fab0861e50308d3205a5",
+  measurementId: "G-EGL6KNJN8S"};
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -17,4 +24,8 @@ $(".sampleSurvey input[type='submit']").click(function(e) {
     surveyList[name] = value;
   }
 });
+firebase
+    .firestore()
+    .collection("survey-information")
+    .add(inputJson);
 // update the result in table
