@@ -30,5 +30,8 @@ $(".sampleSurvey input[type='submit']").click(function(e) {
 });
 firebase.firestore().collection("survey-information").onSnapshot(function(querySnapshot){
   console.log(querySnapshot.size);
+  querySnapshot.forEach(doc =>{
+    console.log(doc.data());
+  })
 });
 // update the result in table
