@@ -32,6 +32,11 @@ firebase.firestore().collection("survey-information").onSnapshot(function(queryS
   console.log(querySnapshot.size);
   querySnapshot.forEach(doc =>{
     console.log(doc.data());
+    var roomtype= doc.data().choice;
+    if(roomtype =="A")
+    
+
+
   })
 });
 // update the result in table
