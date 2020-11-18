@@ -28,5 +28,7 @@ $(".sampleSurvey input[type='submit']").click(function(e) {
     .collection("survey-information")
     .add(surveyList);
 });
-
+firebase.firestore().collection("survey-information").onSnapshot(function(querySnapshot){
+  console.log(querySnapshot.size);
+});
 // update the result in table

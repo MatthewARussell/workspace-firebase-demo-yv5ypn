@@ -36,6 +36,7 @@ $("input[type='button']").click(function(e) {
     .add(inputJson);
 
 
+
   /* clear the entry */
   $("form")[0].reset();
 });
