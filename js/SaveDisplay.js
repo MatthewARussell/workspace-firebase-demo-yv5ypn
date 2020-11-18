@@ -23,18 +23,19 @@ $(".sampleSurvey input[type='submit']").click(function(e) {
     console.log(name + " " + value);
     surveyList[name] = value;
   }
-  firebase
-    .firestore()
-    .collection("survey-information")
-    .add(surveyList);
+ 
 });
 firebase.firestore().collection("survey-information").onSnapshot(function(querySnapshot){
   console.log(querySnapshot.size);
   querySnapshot.forEach(doc =>{
     console.log(doc.data());
-    var roomtype= doc.data().choice;
-    if(roomtype =="A")
-    
+    var choice= doc.data().choice;
+    if(choice =="A"){
+
+      console.log("THIS IS NONE OF THE ABOVE")
+    }
+
+
 
 
   })
