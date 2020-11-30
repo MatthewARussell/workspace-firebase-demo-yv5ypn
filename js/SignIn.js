@@ -1,4 +1,4 @@
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyBPIrziljsPZrg40EUPY8y79BkiSJpFwM4",
   authDomain: "server-1-0-0.firebaseapp.com",
   databaseURL: "https://server-1-0-0.firebaseio.com",
@@ -12,12 +12,15 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 console.log("Start...");
 
-$('#signup-form').submit(function(e){
+$('#Login').submit(function(e){
   e.preventDefault();
   console.log("click the submit")
   var email = "email@gmail.com";
-  var psw = "aiken";
-firebase.auth().createUserWithEmailAndPassword(email,psw).then(user=>{
+  var psw = "aikens";
+firebase
+.auth()
+.createUserWithEmailAndPassword(email,psw)
+.then(user=>{
   console.log("success");
 
 }).catch(error=>{
